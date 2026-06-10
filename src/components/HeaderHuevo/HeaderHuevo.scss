@@ -1,0 +1,128 @@
+@media (max-width: 600px) {
+    #menu {
+        position: absolute;
+        /* Ajusta según la altura de tu navbar */
+        left: 0;
+        background-color: white;
+        width: stretch;
+
+        ul {
+            margin-top: 0;
+            margin-bottom: 0;
+
+            li {
+                padding-top: 4%;
+                padding-bottom: 4%;
+                border-bottom: 0.01rem solid #B0B0AC;
+                border-top: 0.01rem solid #B0B0AC;
+                font-size: 17pt;
+
+                a {
+                    width: stretch;
+                }
+            }
+        }
+    }
+
+    #header-huevo {
+        justify-content: center;
+        gap: 5vmax;
+        padding: 2dvw;
+        width: 96dvw;
+
+        #btnHamburguesa {
+            background-color: white;
+            color: black;
+            font-size: 27pt;
+
+            &:active {
+                background-color: #B0B0AC;
+            }
+        }
+    }
+
+    a.logo {
+        align-content: center;
+        text-align: center;
+
+        img {
+            width: 50%;
+        }
+    }
+
+}
+
+@media (min-width: 600px) {
+    #header-huevo {
+        width: 98dvw;
+
+        #menu {
+            margin-top: 0;
+            width: 70%;
+            align-content: center;
+
+            ul {
+                display: inline-flex;
+
+                li {
+                    font-size: 12pt;
+                }
+            }
+        }
+
+        #btnHamburguesa {
+            display: none;
+        }
+    }
+
+    a.logo {
+        align-content: center;
+        width: 20%;
+
+        img {
+            width: 55%;
+        }
+    }
+
+    a {
+        width: 30%;
+
+        .boton-a-huevo {
+            width: 50%;
+            padding: 2%;
+        }
+    }
+}
+
+#header-huevo {
+    background-color: white;
+    display: inline-flex;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            margin-left: 0.7vmax;
+            margin-right: 0.7vmax;
+
+        }
+    }
+
+    #span-carrito-icon {
+        max-width: 0.1vmax;
+
+        img {
+            max-width: 12%;
+        }
+    }
+
+    a {
+        align-self: center;
+    }
+}

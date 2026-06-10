@@ -1,0 +1,90 @@
+.timeline-section {
+    background-color: rgb(245, 241, 230);
+}
+
+@media screen and (min-width: 600px) {
+
+    .timeline-section {
+        padding-bottom: 3vmax;
+        padding-top: 3vmax;
+    }
+
+    .timeline-item {
+        width: 33dvw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timeline-item {
+        width: 44%;
+    }
+}
+
+
+.timeline {
+    position: relative;
+    padding: 0.1rem 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Línea central */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1dvw;
+    background-color: black;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-top: 1.7rem;
+    margin-bottom: 1.7rem;
+    // padding: 20px 40px;
+}
+
+/* Colocación a la izquierda */
+.timeline-item:nth-child(odd) {
+    margin-left: auto;
+    margin-right: calc(50% + 1px);
+}
+
+/* Colocación a la derecha */
+.timeline-item:nth-child(even) {
+    margin-left: calc(50% + 1px);
+    margin-right: auto;
+}
+
+/* Puntos en la línea central */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: #E2851F;
+    border: 4pt solid #F9B71A;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Acomodo de los puntos según el lado */
+.timeline-item:nth-child(odd)::before {
+    right: -22px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -22px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: #DF150D;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}

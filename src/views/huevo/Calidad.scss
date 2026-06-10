@@ -1,0 +1,143 @@
+.hero-section-calidad {
+    position: relative;
+    width: 100%;
+    /* Ocupa toda la altura de la pantalla */
+    background-image: url('../../assets/calidad.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Capa oscura semitransparente para mejorar la legibilidad del texto */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Color negro al 60% de opacidad */
+    z-index: 1;
+}
+
+/* Contenedor del contenido para que quede por encima del overlay */
+.hero-content-calidad {
+    position: relative;
+    float: left;
+    z-index: 2;
+    padding-bottom: 2%;
+}
+
+
+/* Estilos del párrafo */
+.hero-content-calidad p {
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+    color: rgb(255, 191, 0);
+    text-align: center;
+    font-weight: bold;
+}
+
+#quienes-somos-imagen,
+#quienes-somos-text {
+    background-color: rgb(245, 241, 230);
+    padding-bottom: 2dvh;
+    padding-top: 2dvh;
+}
+
+#quienes-somos-imagen {
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#quienes-somos-text {
+    color: black;
+    padding-left: 10%;
+    padding-right: 5%;
+
+    h2 {
+        color: black;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+
+.titulo-linea {
+    color: white !important;
+    font-weight: bold;
+    font-size: 16pt !important;
+}
+
+.timeline-section {
+    border-top: 0.01rem solid #B0B0AC;
+
+    h2 {
+        color: black;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        font-size: 17pt;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .hero-section-calidad {
+        min-height: 30dvh;
+
+        p {
+            margin-top: 4rem;
+            font-size: 20pt;
+            line-height: 1.4;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+    }
+
+    #quienes-somos-text {
+        h2 {
+            font-size: 17pt;
+            margin-bottom: 5%;
+        }
+
+        p {
+            font-size: 17pt;
+            line-height: 1.4;
+        }
+    }
+
+    // #quienes-somos-imagen {
+    //     padding-left: 10%;
+    //     padding-right: 10%;
+    // }
+
+    .timeline-section {
+        padding-bottom: 3vmax;
+
+        h2 {
+            margin-top: 2rem;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .hero-section-calidad {
+        height: 100%;
+
+        p {
+            margin-top: 4rem;
+        }
+    }
+}

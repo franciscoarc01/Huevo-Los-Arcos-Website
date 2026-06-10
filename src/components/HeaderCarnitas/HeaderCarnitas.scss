@@ -1,0 +1,45 @@
+#header-carnitas {
+    background-color: white;
+    display: inline-block;
+    align-items: center;
+    justify-items: anchor-center;
+    position: sticky;
+    z-index: 999;
+    width: 98dvw;
+    top: 0;
+
+    ul {
+        list-style: none;
+        display: inline-flex;
+        padding-left: 0;
+
+        li {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            font-size: 12pt;
+        }
+    }
+}
+
+#menu {
+    margin-top: 2dvh;
+}
+
+#logo {
+    float: left;
+    margin-left: 2dvw;
+    margin-top: 2dvh;
+
+    img {
+        height: 4rem;
+        width: auto;
+    }
+}
+
+.itemHeader {
+    color: black;
+
+    &:hover {
+        color: #8f7140;
+    }
+}

@@ -1,0 +1,304 @@
+.hero-section-nosotros {
+    position: relative;
+    width: 100%;
+    /* Ocupa toda la altura de la pantalla */
+    background-image: url('../../assets/nosotros.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Capa oscura semitransparente para mejorar la legibilidad del texto */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Color negro al 60% de opacidad */
+    z-index: 1;
+}
+
+/* Contenedor del contenido para que quede por encima del overlay */
+.hero-content-nosotros {
+    position: relative;
+    float: left;
+    z-index: 2;
+    padding-bottom: 2%;
+    min-width: 100%;
+}
+
+
+/* Estilos del párrafo */
+.hero-content-nosotros p {
+    margin-bottom: 35px;
+    color: #ff0000;
+    // font-size: 10pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+
+    .hero-section-nosotros {
+        height: 100vmin;
+
+        p {
+            font-size: 30pt;
+            margin-top: 4.2dvh;
+            margin-bottom: 4dvh;
+            line-height: 1.4;
+
+        }
+    }
+
+    #quienes-somos-text {
+        align-content: center;
+    }
+
+    #vision-mision {
+        display: flex;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+
+        #mision,
+        #vision {
+            width: 50%;
+            border-left: 0.01rem solid #B0B0AC;
+            padding-left: 4vmax;
+            padding-right: 4vmax;
+
+            h2 {
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+
+        p {
+            font-size: 11pt;
+        }
+    }
+
+    #valores-container {
+        border-top: 0.01rem solid #B0B0AC;
+
+        p {
+            font-size: 11pt;
+
+        }
+
+        h2 {
+            font-size: 14pt;
+        }
+
+        .valor-container {
+            margin-top: 2%;
+            margin-bottom: 2%;
+            padding-left: 2vmax;
+            padding-right: 2vmax;
+            border-left: 0.01rem solid #B0B0AC;
+
+            .icon-container {
+                img {
+                    max-width: 4dvw;
+                    height: auto;
+                    margin-right: 1vmax;
+                }
+            }
+        }
+    }
+
+    #info-text {
+        width: 50%;
+
+        p {
+            font-size: 11pt;
+        }
+    }
+
+    #info-imagen {
+        padding-right: 3dvw;
+        max-width: 50%;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .hero-section-nosotros {
+        p {
+            font-size: 17pt;
+            margin-top: 4.2dvh;
+            margin-bottom: 4dvh;
+            line-height: 1.4;
+
+        }
+    }
+
+    #info-text {
+        p {
+            font-size: 15pt;
+            line-height: 1.4;
+        }
+    }
+
+    #info-imagen {
+        // padding-left: 4dvw;
+        // padding-right: 4dvw;
+        padding-bottom: 2%;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    #vision-mision {
+        p {
+            font-size: 15pt;
+            line-height: 1.4;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    #mision,
+    #vision {
+        border-bottom: 0.01rem solid #B0B0AC;
+        padding-top: 2vmax;
+        padding-bottom: 2vmax;
+
+        .icon-container {
+            margin-left: 2%;
+        }
+    }
+
+    #valores-container {
+        border-top: 0.01rem solid #B0B0AC;
+
+        #valores-title {
+            margin-bottom: 4%;
+        }
+
+        .valor-container {
+            padding-top: 2%;
+            padding-bottom: 2%;
+            padding-left: 2vmax;
+            padding-right: 2vmax;
+            border-bottom: 0.01rem solid #B0B0AC;
+
+            h2 {
+                text-align: center;
+            }
+
+            .icon-container {
+                img {
+                    max-width: 7vmax;
+                    height: auto;
+                    margin-right: 1vmax;
+                }
+            }
+        }
+
+        p {
+            font-size: 15pt;
+        }
+
+        h2 {
+            font-size: 17pt;
+        }
+    }
+}
+
+#vision-mision {
+    background-color: rgb(245, 241, 230);
+    border-top: 0.01rem solid #B0B0AC;
+
+    #mision,
+    #vision {
+
+        h2,
+        p {
+            color: black;
+        }
+
+        h2 {
+            font-size: 20pt;
+            font-weight: bold;
+        }
+
+        #iconVision {
+            img {
+                max-width: 75%;
+            }
+        }
+
+        .icon-container {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            margin-right: 5%;
+        }
+    }
+}
+
+#valores-container {
+    background-color: rgb(245, 241, 230);
+
+    #valores-title {
+        text-align: center;
+        margin-top: 4dvh;
+        font-size: 17pt;
+    }
+
+    h2,
+    p {
+        color: black;
+        text-align: left;
+    }
+
+    h2 {
+        font-weight: bold;
+    }
+}
+
+#info-text {
+    background-color: rgb(245, 241, 230);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    h2,
+    p {
+        text-align: left;
+        color: #000;
+    }
+
+    h2 {
+        margin-bottom: 5%;
+        font-weight: bold;
+    }
+}
+
+#info-imagen {
+    background-color: rgb(245, 241, 230);
+    align-content: center;
+}

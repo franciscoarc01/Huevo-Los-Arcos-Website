@@ -1,0 +1,51 @@
+footer {
+    display: flex;
+
+    div {
+        margin-left: 4%;
+        margin-right: 4%;
+
+        p,
+        a,
+        h4 {
+            text-align: left;
+            color: #9ca3af;
+        }
+
+        a:hover {
+            color: white;
+        }
+    }
+
+}
+
+.carnitas {
+    color: #b49659;
+}
+
+.lele {
+    color: white;
+}
+
+.carnitas,
+.lele {
+    font-weight: bold;
+    font-size: 4dvh;
+}
+
+.div1 {
+    padding-top: 1.33em;
+}
+
+
+.brand-name-container {
+    display: flex;
+    text-align: start;
+    margin-bottom: 1.33em;
+    justify-content: start;
+    gap: 0.5rem;
+}
+
+.texto-footer {
+    font-size: 10pt;
+}

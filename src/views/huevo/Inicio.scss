@@ -1,0 +1,484 @@
+.hero-section-inicio {
+    position: relative;
+    width: 100%;
+    /* Ocupa toda la altura de la pantalla */
+    background-image: url('../../assets/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    justify-content: left;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Capa oscura semitransparente para mejorar la legibilidad del texto */
+// .hero-overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 50%;
+//     height: 100%;
+//     background-color: rgba(255, 255, 255, 0.6);
+//     /* Color negro al 60% de opacidad */
+//     z-index: 1;
+// }
+
+/* Contenedor del contenido para que quede por encima del overlay */
+.hero-content-inicio {
+    position: relative;
+    float: left;
+    z-index: 2;
+    padding-bottom: 2%;
+}
+
+
+/* Estilos del párrafo */
+.hero-content-inicio p {
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+    color: white;
+    text-align: left;
+    font-size: 10pt;
+}
+
+@media screen and (max-width: 600px) {
+
+    .hero-section-inicio {
+        min-height: 70dvw;
+    }
+
+    .hero-content-inicio {
+        width: 100%;
+
+        p {
+            display: none;
+        }
+    }
+
+    #puntos-clave {
+        background-color: rgb(245, 241, 230);
+        color: black;
+        border-bottom: 0.01rem solid #B0B0AC;
+    }
+
+    .punto-clave {
+        display: inline-flex;
+        padding-left: 2dvw;
+        padding-right: 2dvw;
+        padding-top: 4dvw;
+        padding-bottom: 4dvw;
+        border-bottom: 0.01rem solid #B0B0AC;
+        align-items: center;
+
+        div {
+            margin-left: 1dvw;
+        }
+
+        .iconos-clave {
+            margin-right: 2%;
+        }
+    }
+
+    #container-productos {
+        padding-top: 7%;
+
+        h2,
+        p {
+            text-align: center;
+        }
+
+        .boton-a-huevo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    #container-sobre-nosotros {
+
+        #imagen-sobre-nosotros {
+            max-width: 100vw;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        #sobre-nosotros-info {
+            padding-top: 5vmin;
+            padding-bottom: 5vmin;
+
+            section {
+                margin-bottom: 4%;
+            }
+
+            #ante-titulo,
+            h2 {
+                text-align: center;
+            }
+
+            #parrafo {
+                text-align: justify;
+                margin-right: 2dvw;
+                font-size: 14pt;
+            }
+
+            .boton-a-huevo {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        }
+    }
+
+    #container-recetas {
+        #recetas-texto {
+            h2 {
+                padding-top: 2vmin;
+                font-weight: bold;
+                font-size: 17pt;
+            }
+
+            p {
+                font-size: 16pt;
+            }
+
+            h2,
+            p {
+                text-align: center;
+            }
+
+            div {
+                max-width: 25%;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+
+    #distribuidor-container,
+    #notipromos-container {
+        // width: 79%;
+        border-bottom: 0.01rem solid #B0B0AC;
+        padding-top: 2dvh;
+        padding-bottom: 2dvh;
+        width: stretch;
+    }
+
+    #distribuidor-container {
+        p {
+            margin-bottom: 1rem;
+            font-size: 14pt !important;
+        }
+
+        section {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+            text-align: center;
+            padding-left: 1%;
+            padding-right: 2%;
+            max-width: 30dvw;
+        }
+    }
+
+    #notipromos-container {
+        padding-right: 2dvw;
+
+        p {
+            font-size: 14pt !important;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    .hero-content-inicio {
+        min-height: 100dvh;
+        align-content: end;
+        width: 32%;
+        padding-left: 10vmax;
+    }
+
+    #puntos-clave {
+        background-color: rgb(245, 241, 230);
+        color: black;
+        padding-bottom: 5%;
+        padding-top: 5%;
+        border-bottom: 0.01rem solid #B0B0AC;
+    }
+
+    #container-productos {
+        padding-top: 7dvh;
+        padding-bottom: 7dvh;
+    }
+
+    #container-sobre-nosotros {
+
+        #sobre-nosotros-info {
+            section {
+                margin-bottom: 6dvh;
+            }
+
+            .boton-a-huevo {
+                float: left;
+                margin-left: 2%;
+            }
+
+            #parrafo {
+                font-size: 80%;
+            }
+        }
+
+        #imagen-sobre-nosotros {
+            max-width: 50vw;
+            align-content: center;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    #container-recetas {
+        width: 100%;
+        padding-top: 6dvh;
+        padding-bottom: 6dvh;
+
+        #recetas-texto {
+            max-width: 27%;
+
+            p,
+            h2 {
+                text-align: left;
+                margin-bottom: 0.7rem;
+                color: black;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                div {
+                    background-color: rgb(226, 133, 31);
+                    width: 60%;
+                    padding: 3%;
+                    border-radius: 11px;
+
+                    &:hover {
+                        background-color: rgba(226, 133, 31, 0.7)
+                    }
+                }
+            }
+        }
+
+        #recetas-texto,
+        #carrusel-recetas {
+            margin-left: 3%;
+        }
+    }
+
+    #distribuidor-container,
+    #notipromos-container {
+        width: 50%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+
+    }
+
+    #distribuidor-container {
+        section {
+            max-width: 17dvw;
+        }
+
+        #boton-mas-info-dist {
+            section {
+                padding: 2% 0 2% 0;
+            }
+        }
+    }
+
+}
+
+.punto-clave {
+    display: inline-flex;
+    padding-left: 2dvw;
+    padding-right: 2dvw;
+    border-right: 0.01rem solid #B0B0AC;
+    align-items: center;
+
+    div {
+        margin-left: 1dvw;
+    }
+}
+
+.iconos-clave {
+    max-width: 6vmax;
+}
+
+.punto-clave-titulo {
+    font-weight: bold;
+}
+
+.punto-clave-descripcion {
+    font-size: 12pt;
+    text-align: left;
+}
+
+#container-productos {
+    background-color: rgb(245, 241, 230);
+    border-bottom: 0.01rem solid #B0B0AC;
+    padding-left: 2%;
+    padding-right: 2%;
+
+    h2 {
+        color: black;
+        font-weight: bold;
+    }
+
+    p {
+        color: #C1B59D;
+        font-size: 12pt;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .boton-a-huevo {
+        padding: 0.7rem;
+        margin-top: 1rem;
+    }
+}
+
+#container-sobre-nosotros {
+    background-color: rgb(245, 241, 230);
+}
+
+#sobre-nosotros-info {
+    padding-top: 7dvh;
+    padding-bottom: 5dvh;
+
+    section {
+        margin-left: 2%;
+    }
+
+    #ante-titulo {
+        color: black;
+        font-weight: bold;
+        text-align: left;
+        padding-bottom: 4%;
+    }
+
+    h2 {
+        font-weight: bold;
+        color: black;
+        text-align: left;
+        padding-bottom: 4%;
+    }
+
+    #parrafo {
+        text-align: left;
+        color: black;
+    }
+}
+
+.sobre-nosotros-icons {
+    max-width: auto;
+    border-right: 0.1rem solid #B0B0AC;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+#container-recetas {
+    background-color: #F9B71A;
+
+    #recetas-texto {
+
+        p,
+        h2 {
+            margin-bottom: 0.7rem;
+            color: black;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+
+            div {
+                background-color: rgb(226, 133, 31);
+                border-radius: 11px;
+
+                &:hover {
+                    background-color: rgba(226, 133, 31, 0.7)
+                }
+            }
+        }
+    }
+
+    #recetas-texto,
+    #carrusel-recetas {
+        margin-left: 3%;
+    }
+}
+
+#prefooter,
+#distribuidor-container,
+#notipromos-container {
+    background-color: #F2EEE3;
+}
+
+#distribuidor-container,
+#notipromos-container {
+    border-right: 0.01rem solid #B0B0AC;
+    padding-left: 5vmax;
+    padding-right: 5vmax;
+
+    div {
+
+        h2,
+        p {
+            color: black;
+        }
+
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        p {
+            font-size: 11pt;
+        }
+
+        #boton-mas-info-dist {
+            text-decoration: none;
+            color: black;
+            font-size: 10pt;
+
+            section {
+                border: 0.04rem solid black;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.footer-icons {
+    max-width: 22%;
+    max-height: auto;
+}
+
+.camion-icon {
+    max-width: 20%;
+    margin-right: 5%;
+}

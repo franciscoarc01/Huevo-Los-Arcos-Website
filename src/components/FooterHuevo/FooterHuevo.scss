@@ -1,0 +1,121 @@
+@media screen and (min-width: 600px) {
+
+    footer {
+        display: flex;
+        max-width: 97dvw;
+
+        .logo {
+            max-width: 15dvw;
+            height: auto;
+        }
+
+        #facebookIcon,
+        #instagramIcon {
+            max-width: 3rem;
+        }
+
+
+        p,
+        a {
+
+            font-size: 12pt;
+        }
+
+        h3 {
+            font-size: 16pt;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        display: block;
+        max-width: 100dvw;
+
+        .logo {
+            max-width: 70%;
+        }
+
+        .footer-col1 {
+            p {
+                line-height: 1.6;
+            }
+
+            a {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+
+            #facebookIcon,
+            #instagramIcon {
+                height: 8dvh;
+            }
+        }
+
+        #social-icons {
+            text-align: start;
+            display: flex;
+        }
+
+        p,
+        a {
+
+            font-size: 20pt;
+        }
+
+        h3 {
+            font-size: 30pt;
+            text-align: center !important;
+        }
+
+        ul {
+            li {
+                margin-bottom: 4%;
+                margin-top: 4%;
+                text-align: center !important;
+            }
+        }
+    }
+
+}
+
+footer {
+    background-color: #221713;
+    padding-top: 5vmin;
+    color: rgb(120, 109, 105);
+
+    .logo {
+        margin-top: 1em;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    p,
+    a {
+        color: rgb(120, 109, 105);
+    }
+
+    p {
+        margin-top: 2rem;
+    }
+
+    #facebookIcon,
+    #instagramIcon {
+        border-radius: 12px;
+        margin-top: 2rem;
+    }
+
+    #facebookIcon {
+        background-color: #1877F2;
+        margin-right: 7%;
+    }
+
+    #instagramIcon {
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        margin-left: 7%;
+    }
+}

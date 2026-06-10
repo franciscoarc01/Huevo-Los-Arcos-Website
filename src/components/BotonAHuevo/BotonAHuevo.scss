@@ -1,0 +1,19 @@
+.boton-a-huevo {
+    font-size: 15pt;
+    padding: 4%;
+    border-radius: 10px;
+    background-color: rgb(241, 192, 20);
+    color: black;
+    border-style: solid;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #f7e16d;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    a {
+        text-decoration: none;
+    }
+}
