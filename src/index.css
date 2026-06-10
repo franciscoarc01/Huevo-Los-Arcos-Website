@@ -113,6 +113,32 @@ code {
   background: var(--code-bg);
 }
 
+#logo-huevo,
+#logo-lele {
+  width: 47%;
+}
+
+#logo-huevo img {
+  width: 77%;
+  min-height: auto;
+}
+
+#logo-lele img {
+  width: 50%;
+  min-height: auto;
+}
+
+@media screen and (max-width: 600px) {
+
+  #logo-huevo img,
+  #logo-lele img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 4rem;
+  }
+}
+
 .text-decoration-none {
   text-decoration: none;
 }
@@ -155,6 +181,14 @@ code {
 
 .gap-2vmax {
   gap: 2vmax;
+}
+
+.gap-4pct {
+  gap: 4%;
+}
+
+.gap-2rem {
+  gap: 2rem;
 }
 
 .gap-1rem {
@@ -213,4 +247,12 @@ code {
 
 .pb-5vmin {
   padding-bottom: 5vmin;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
 }
