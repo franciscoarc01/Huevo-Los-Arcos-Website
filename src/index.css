@@ -128,6 +128,25 @@ code {
   min-height: auto;
 }
 
+#logo-huevo img,
+#logo-lele img {
+  transition: box-shadow 0.2s ease-in, transform 0.5s ease-in-out;
+}
+
+#logo-huevo img:hover,
+#logo-lele img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+#logo-huevo img:hover {
+  box-shadow: 1px -1px 81px 17px rgba(255, 0, 0, 0.32);
+}
+
+#logo-lele img:hover {
+  box-shadow: 1px -1px 81px 17px rgba(190, 159, 87, 0.32);
+}
+
 @media screen and (max-width: 600px) {
 
   #logo-huevo img,
