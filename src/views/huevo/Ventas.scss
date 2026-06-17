@@ -1,0 +1,177 @@
+#empresa-container {
+    background-color: #1a202c;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem;
+    gap: 3rem;
+    align-items: center;
+
+    .empresa-info {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    #imagen-servicio {
+        flex: 1;
+        min-width: 300px;
+
+        img {
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            display: block;
+        }
+    }
+
+    .empresa-icon {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #F9B71A;
+        margin-bottom: 1.5rem;
+
+        svg {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        span {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.875rem;
+        }
+    }
+
+    #titulo {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        color: white;
+        line-height: 1.2;
+    }
+
+    .empresa-desc {
+        color: #cbd5e0;
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    .empresa-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2.5rem;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+
+            svg {
+                color: #F9B71A;
+                width: 1.5rem;
+                height: 1.5rem;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    .empresa-contact-link {
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: #F9B71A;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            width: fit-content;
+
+            &:hover {
+                background-color: rgba(249, 183, 26, 0.8);
+            }
+
+            svg {
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+.hero-section-ventas {
+    position: relative;
+    width: 100%;
+    /* Ocupa toda la altura de la pantalla */
+    background-image: url('../../assets/huevo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    justify-content: left;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Capa oscura semitransparente para mejorar la legibilidad del texto */
+// .hero-overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 50%;
+//     height: 100%;
+//     background-color: rgba(255, 255, 255, 0.6);
+//     /* Color negro al 60% de opacidad */
+//     z-index: 1;
+// }
+
+/* Contenedor del contenido para que quede por encima del overlay */
+.hero-content-ventas {
+    position: relative;
+    float: left;
+    z-index: 2;
+    padding-bottom: 2%;
+}
+
+
+/* Estilos del párrafo */
+.hero-content-ventas p {
+    font-size: 4rem;
+    margin-bottom: 35px;
+    color: #F9B71A;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .hero-section-ventas {
+        min-height: 70dvw;
+    }
+
+    .hero-content-ventas {
+        width: 100%;
+
+        p {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .hero-content-ventas {
+        min-height: 100dvh;
+        align-content: baseline;
+        width: 32%;
+        padding-left: 10vmax;
+        padding-top: 12vmin;
+    }
+}

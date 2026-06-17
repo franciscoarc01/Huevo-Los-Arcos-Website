@@ -15,7 +15,7 @@ import iconHuevoSvg from "../../assets/icons/huevo-distribucion.svg"
 import iconCalidad from "../../assets/icons/calidad.svg"
 import iconFamilia2 from "../../assets/icons/proceso-distribucion/5.png"
 import iconTienda from "../../assets/icons/tienda.png"
-import imgRecetario from "../../assets/recetario-sin-fondo.png"
+import imgRecetario from "../../assets/recetario-01.png"
 import imgTortillaEspañola from "../../assets/tortilla-espannola.jpg"
 import imgHuevosALaMexicana from "../../assets/huevos-mexicana.jpg"
 import imgTacoHuevoChorizo from "../../assets/taco-huevo-chorizo.jpg"
@@ -60,7 +60,7 @@ class Recetas extends Component {
                 <div className="hero-section-recetas">
                     <div className="hero-overlay"></div>
                     <div className="hero-content-recetas">
-                        <Link id="" className="text-decoration-none" ><section>Descargar Recetario</section></Link>
+                        <a id="" className="text-decoration-none" href="/downloads/Recetario.pdf" download="Recetario.pdf"><section>Descargar Recetario</section></a>
                     </div>
                 </div>
                 <section id="recetas-subcontainer">
@@ -174,7 +174,7 @@ class Recetas extends Component {
                                 <div>
                                     <p className="descripcion">Más de 50 recetas prácticas para todos los días</p>
                                     <img src="" alt="" />
-                                    <Link className="text-decoration-none" ><section>Descargar Recetario</section></Link>
+                                    <a href="/downloads/Recetario.pdf" download="Recetario.pdf" className="text-decoration-none"><section>Descargar Recetario</section></a>
                                 </div>
                             </section>
                             <section>
@@ -188,7 +188,7 @@ class Recetas extends Component {
                         <h2>Del gallinero a tu mesa</h2>
                         <p>Calidad y frescura en cada huevo</p>
                         <div className="">
-                            <Link className="text-decoration-none" ><section>Contactar Distribuidor</section></Link>
+                            <Link className="text-decoration-none" to={"/huevo/contacto"} ><section>Contactar Distribuidor</section></Link>
                         </div>
                     </div>
                 </div>

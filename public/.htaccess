@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Allow direct access to index.html
+  RewriteRule ^index\.html$ - [L]
+
+  # 2. EXCLUDE your downloads folder or specific files from React Router
+  # Replace 'downloads' with your actual directory name if it differs
+  RewriteCond %{REQUEST_URI} ^/downloads [NC]
+  RewriteRule ^ - [L]
+
+  # 3. Fallback for React Router: If the requested path is NOT an actual file, directory, or symlink
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>

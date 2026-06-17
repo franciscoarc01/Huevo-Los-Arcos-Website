@@ -66,12 +66,9 @@ class Calidad extends Component {
                     <div id="quienes-somos-text">
                         <h2>¿POR QUÉ HUEVO LOS ARCOS?</h2>
                         <p>
-                            Porque ofrecemos más que un producto.
-                            Ofrecemos confianza, frescura y compromiso
-                            en cada entrega. Nuestro objetivo es convertirnos
-                            en el aliado estratégico de nuestros clientes,
-                            aportando valor mediante calidad,
-                            servicio y cumplimiento.
+                            Nuestro compromiso va más allá de entregar un producto de calidad.
+                            Trabajamos día a día para brindar confianza,
+                            frescura y un servicio puntual que permita a nuestros clientes contar siempre con nosotros.
                         </p>
                     </div>
                 </section>

@@ -24,7 +24,7 @@ function App() {
         <h1>Seleccione a dónde quiere entrar</h1>
         <section className={isMobile ? "block" : "flex justify-content-center align-items-center gap-1rem"}>
           <Link to="/huevo" id='logo-huevo'><img src={logoHuevo} alt="" /></Link>
-          <Link to="" id='logo-lele'><img src={logoLele} alt="" /></Link>
+          <Link to="https://lelemexico.com/" id='logo-lele'><img src={logoLele} alt="" /></Link>
         </section>
       </section>
     </>

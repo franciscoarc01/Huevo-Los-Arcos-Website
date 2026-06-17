@@ -24,12 +24,13 @@ import HuevosDiariosIcon from "../../assets/icons/huevos-diarios.svg"
 import huevos12 from "../../assets/12huevos.jpg"
 import huevos18 from "../../assets/18huevos.jpg"
 import huevos30 from "../../assets/30huevos.jpg"
-import caja90 from "../../assets/caja90.jpg"
+import caja90 from "../../assets/caja-90.png"
 import { Nosotros } from "./Nosotros.jsx"
 import { Calidad } from "./Calidad.jsx"
 import { Distribucion } from "./Distribucion.jsx"
 import { Contacto } from "./Contacto.jsx"
 import { Recetas } from "./Recetas.jsx"
+import { Ventas } from "./Ventas.jsx"
 
 const slides = [
     { id: 1, url: HOTCAKES },
@@ -55,6 +56,7 @@ class Inicio extends Component {
         iconLink.type = "image/svg+xml"
         iconLink.href = "/Logo-Los-Arcos.svg"
         cabeza.appendChild(iconLink)
+        document.title = "Huevos Los Arcos"
     }
 
     render() {
@@ -64,6 +66,7 @@ class Inicio extends Component {
                     <HeaderHuevo />
                     <Routes basename="huevo">
                         <Route path="/" element={<Contenido />} />
+                        <Route path="ventas" element={<Ventas />} />
                         <Route path="nosotros" element={<Nosotros />} />
                         <Route path="calidad" element={<Calidad />} />
                         <Route path="distribucion" element={<Distribucion />} />
@@ -173,7 +176,7 @@ const Contenido = () => {
                         } />
                     <CardProductos
                         image={productos.huevos18}
-                        title="18 PIEZAS"
+                        title="24 PIEZAS"
                         buttonProps={
                             {
                                 linkTo: "#",
@@ -237,7 +240,7 @@ const Contenido = () => {
                 <div id="recetas-texto">
                     <h2>RECETAS QUE INSPIRAN</h2>
                     <p>Descubre deliciosas recetas hechas con Huevos Los Arcos</p>
-                    <Link><div>VER RECETAS</div></Link>
+                    <Link to={"/huevo/recetas"}><div>VER RECETAS</div></Link>
                 </div>
                 <Carousel images={slides} visible={isMobile ? 1 : 3} isMobile={isMobile} />
             </section>
@@ -247,7 +250,7 @@ const Contenido = () => {
                     <div>
                         <h2>¿ERES DISTRIBUIDOR?</h2>
                         <p>Unete a nuestra red de distribución y lleva calidad a mas hogares</p>
-                        <Link id="boton-mas-info-dist" ><section>MAS INFORMACIÓN</section></Link>
+                        <Link id="boton-mas-info-dist" to={"/huevo/contacto"}><section>MAS INFORMACIÓN</section></Link>
                     </div>
                 </div>
                 <div className="inline-flex" id="notipromos-container">

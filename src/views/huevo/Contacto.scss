@@ -165,6 +165,7 @@
                     align-items: center;
                     gap: 1rem;
                     margin-bottom: 0.5rem;
+                    justify-content: center;
                 }
 
                 .titulo-contacto-card {
@@ -191,6 +192,7 @@
 
                     color: #F9B71A;
                 }
+
 
                 section {
                     display: flex;
@@ -252,114 +254,7 @@
         }
     }
 
-    #empresa-container {
-        background-color: #1a202c;
-        color: white;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 4rem;
-        gap: 3rem;
-        align-items: center;
 
-        .empresa-info {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        #imagen-servicio {
-            flex: 1;
-            min-width: 300px;
-
-            img {
-                width: 100%;
-                border-radius: 1rem;
-                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-                display: block;
-            }
-        }
-
-        .empresa-icon {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: #F9B71A;
-            margin-bottom: 1.5rem;
-
-            svg {
-                width: 2.5rem;
-                height: 2.5rem;
-            }
-
-            span {
-                font-weight: 600;
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-                font-size: 0.875rem;
-            }
-        }
-
-        #titulo {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-            color: white;
-            line-height: 1.2;
-        }
-
-        .empresa-desc {
-            color: #cbd5e0;
-            font-size: 1.125rem;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .empresa-features {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 2.5rem;
-
-            li {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                margin-bottom: 1rem;
-                color: #e2e8f0;
-
-                svg {
-                    color: #F9B71A;
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    flex-shrink: 0;
-                }
-            }
-        }
-
-        .empresa-contact-link {
-            text-decoration: none;
-            color: black;
-            display: inline-block;
-
-            div {
-                display: flex;
-                align-items: center;
-                gap: 0.75rem;
-                background-color: #F9B71A;
-                padding: 1rem 1.5rem;
-                border-radius: 8px;
-                font-weight: bold;
-                transition: background-color 0.2s;
-                width: fit-content;
-
-                &:hover {
-                    background-color: rgba(249, 183, 26, 0.8);
-                }
-
-                svg {
-                    flex-shrink: 0;
-                }
-            }
-        }
-    }
 
     #soporte-rapido-container {
         padding: 4rem;

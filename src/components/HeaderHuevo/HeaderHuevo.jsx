@@ -27,10 +27,18 @@ const HeaderHuevo = () => {
                 <button id="btnHamburguesa" onClick={() => setShowMenu(!showMenu)}>
                     &#9776;
                 </button>
-                <Link to="/huevo/" className="logo"><img src={logo} alt="logo" /></Link>
-                <div id="menu" style={isMobile ? showMenu ? { display: "block", top: `${document.getElementById("header-huevo").offsetHeight}px` } : { display: "none" } : {}}>
+                <Link to="/huevo/" className="logo" onClick={() => setShowMenu(false)}><img src={logo} alt="logo" /></Link>
+                <div id="menu" style={
+                    isMobile ?
+                        showMenu ?
+                            {
+                                display: "block",
+                                top: `${document.getElementById("header-huevo").offsetHeight}px`,
+                            } :
+                            { display: "none" } :
+                        {}}>
                     <ul >
-                        <li><Link onClick={() => setShowMenu(false)} className="text-decoration-none itemHeader" to="/huevo/">INICIO</Link></li>
+                        <li><Link onClick={() => setShowMenu(false)} className="text-decoration-none itemHeader" to="/huevo/ventas">VENTAS</Link></li>
                         <li><Link onClick={() => setShowMenu(false)} className="text-decoration-none itemHeader" to="/huevo/nosotros">NOSOTROS</Link></li>
                         <li><Link onClick={() => setShowMenu(false)} className="text-decoration-none itemHeader" to="/huevo/productos">PRODUCTOS</Link></li>
                         <li><Link onClick={() => setShowMenu(false)} className="text-decoration-none itemHeader" to="/huevo/calidad">CALIDAD</Link></li>

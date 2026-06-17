@@ -56,8 +56,7 @@ body {
 
 @media (min-width: 600px) {
   #root {
-    width: 98dvw;
-    margin: 0 auto;
+    width: 99dvw;
     text-align: center;
     border-inline: 1px solid var(--border);
     min-height: 100dvh;
