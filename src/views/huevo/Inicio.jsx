@@ -56,7 +56,7 @@ class Inicio extends Component {
         iconLink.type = "image/svg+xml"
         iconLink.href = "/Logo-Los-Arcos.svg"
         cabeza.appendChild(iconLink)
-        document.title = "Huevos Los Arcos"
+        document.title = "Huevo Los Arcos"
     }
 
     render() {
