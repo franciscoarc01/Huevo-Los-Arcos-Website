@@ -121,8 +121,8 @@ class Contacto extends Component {
                             <Card className="info-card">
                                 <h2 className="titulo-contacto-card">Síguenos en redes</h2>
                                 <section id="">
-                                    <Link><span><img id="" src={FacebookIcon} alt="FacebookIcon" /></span></Link>
-                                    <Link><span><img id="" src={InstagramIcon} alt="InstagramIcon" /></span></Link>
+                                    <Link to="https://www.facebook.com/share/1CS7hu2wTA/?mibextid=wwXIfr" target="_blank"><span><img id="" src={FacebookIcon} alt="FacebookIcon" /></span></Link>
+                                    <Link to="https://www.instagram.com/huevo.losarcos?igsh=MXZoamhnOG5vd3d2OA==" target="_blank"><span><img id="" src={InstagramIcon} alt="InstagramIcon" /></span></Link>
                                 </section>
                             </Card>
                         </section>

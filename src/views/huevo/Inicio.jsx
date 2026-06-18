@@ -31,6 +31,7 @@ import { Distribucion } from "./Distribucion.jsx"
 import { Contacto } from "./Contacto.jsx"
 import { Recetas } from "./Recetas.jsx"
 import { Ventas } from "./Ventas.jsx"
+import { Helmet } from "react-helmet-async";
 
 const slides = [
     { id: 1, url: HOTCAKES },
@@ -62,6 +63,11 @@ class Inicio extends Component {
     render() {
         return (
             <>
+                <Helmet>
+                    <meta name="description" content="Somos una empresa especializada en la producción, selección, empaque y comercialización de huevo blanco" />
+                    <meta name="keywords" content="huevo, huevo blanco, huevo los arcos, huevos los arcos" />
+                    <meta name="author" content="Huevo Los Arcos" />
+                </Helmet>
                 <section className="relative">
                     <HeaderHuevo />
                     <Routes basename="huevo">

@@ -12,8 +12,8 @@ const FooterHuevo = () => {
                     <Link to="/huevo/"><img src={logo} alt="logo" className="logo" /></Link>
                     <p>Frescura que se nota, calidad que te acompaña.</p>
                     <div id="social-icons">
-                        <Link><span><img id="facebookIcon" src={FacebookIcon} alt="FacebookIcon" /></span></Link>
-                        <Link><span><img id="instagramIcon" src={InstagramIcon} alt="InstagramIcon" /></span></Link>
+                        <Link to="https://www.facebook.com/share/1CS7hu2wTA/?mibextid=wwXIfr" target="_blank"><span><img id="facebookIcon" src={FacebookIcon} alt="FacebookIcon" /></span></Link>
+                        <Link to="https://www.instagram.com/huevo.losarcos?igsh=MXZoamhnOG5vd3d2OA==" target="_blank"><span><img id="instagramIcon" src={InstagramIcon} alt="InstagramIcon" /></span></Link>
                     </div>
                 </div>
                 <div>
@@ -31,11 +31,11 @@ const FooterHuevo = () => {
                 <div>
                     <h3 className="text-left">PRODUCTOS</h3>
                     <ul>
-                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Huevo Blanco</Link></li>
-                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Huevo Rojo</Link></li>
-                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Huevo Orgánico</Link></li>
-                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Huevo Pasteurizado</Link></li>
-                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Huevo Líquido</Link></li>
+                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Charola de 12</Link></li>
+                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Charola de 18</Link></li>
+                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Charola de 30</Link></li>
+                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Caja de 90</Link></li>
+                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Caja de 360</Link></li>
                     </ul>
                 </div>
                 <div>
