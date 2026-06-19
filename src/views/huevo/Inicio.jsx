@@ -32,6 +32,7 @@ import { Contacto } from "./Contacto.jsx"
 import { Recetas } from "./Recetas.jsx"
 import { Ventas } from "./Ventas.jsx"
 import { Helmet } from "react-helmet-async";
+import { Productos } from "./Productos.jsx"
 
 const slides = [
     { id: 1, url: HOTCAKES },
@@ -78,6 +79,7 @@ class Inicio extends Component {
                         <Route path="distribucion" element={<Distribucion />} />
                         <Route path="contacto" element={<Contacto />} />
                         <Route path="recetas" element={<Recetas />} />
+                        <Route path="productos" element={<Productos />} />
                     </Routes>
                 </section>
                 <FooterHuevo />
