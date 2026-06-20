@@ -6,7 +6,7 @@ const CardProductos = ({ image, title, buttonProps: { linkTo, btnlabel, classNam
         <>
             <section className="card-producto">
                 <div className="imagen-producto">
-                    <img src={image} alt="" />
+                    <img src={image} alt={`Imagen del producto de ${title}`} />
                 </div>
                 <h2>{title}</h2>
                 <BotonAHuevo linkTo={linkTo} type="button" className={className}>{btnlabel}</BotonAHuevo>
