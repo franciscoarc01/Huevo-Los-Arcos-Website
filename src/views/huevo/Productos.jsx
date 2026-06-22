@@ -1,16 +1,6 @@
-import {
-    Routes,
-    Route,
-    Link
-} from "react-router-dom";
-
 import { Component } from "react"
 import "./Productos.scss"
 import CardProductos from "../../components/CardProductos"
-import img12Piezas from "../../assets/12huevos.jpg"
-import img18Piezas from "../../assets/18huevos.jpg"
-import img30Piezas from "../../assets/30huevos.jpg"
-import img90Piezas from "../../assets/caja-90.png"
 class Productos extends Component {
 
     constructor(props) {
@@ -46,41 +36,41 @@ class Productos extends Component {
                 <p id="descripcion-productos">Contamos con diferentes presentaciones de huevo para toda opción de consumo</p>
                 <section id="productos-grid">
                     <CardProductos
-                        image={img12Piezas}
+                        image={"/images/productos/12huevos.jpg"}
                         title="12 piezas"
                         buttonProps={
                             {
-                                linkTo: "#",
+                                linkTo: "/huevo/productos/1",
                                 btnlabel: "VER PRODUCTO",
                                 className: this.state.isMobile ? "mg-bottom-7pct" : "mg-bottom-10pct"
                             }
                         } />
                     <CardProductos
-                        image={img18Piezas}
+                        image={"/images/productos/18huevos.jpg"}
                         title="24 piezas"
                         buttonProps={
                             {
-                                linkTo: "#",
+                                linkTo: "/huevo/productos/2",
                                 btnlabel: "VER PRODUCTO",
                                 className: this.state.isMobile ? "mg-bottom-7pct" : "mg-bottom-10pct"
                             }
                         } />
                     <CardProductos
-                        image={img30Piezas}
+                        image={"/images/productos/30huevos.jpg"}
                         title="30 piezas"
                         buttonProps={
                             {
-                                linkTo: "#",
+                                linkTo: "/huevo/productos/3",
                                 btnlabel: "VER PRODUCTO",
                                 className: this.state.isMobile ? "mg-bottom-7pct" : "mg-bottom-10pct"
                             }
                         } />
                     <CardProductos
-                        image={img90Piezas}
+                        image={"/images/productos/caja-90.png"}
                         title="90 piezas"
                         buttonProps={
                             {
-                                linkTo: "#",
+                                linkTo: "/huevo/productos/4",
                                 btnlabel: "VER PRODUCTO",
                                 className: this.state.isMobile ? "mg-bottom-7pct" : "mg-bottom-10pct"
                             }
@@ -90,7 +80,7 @@ class Productos extends Component {
                         title="360 piezas"
                         buttonProps={
                             {
-                                linkTo: "#",
+                                linkTo: "/huevo/productos/5",
                                 btnlabel: "VER PRODUCTO",
                                 className: this.state.isMobile ? "mg-bottom-7pct" : "mg-bottom-10pct"
                             }

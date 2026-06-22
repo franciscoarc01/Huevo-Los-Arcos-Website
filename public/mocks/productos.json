@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "nombre": "Huevo Los Arcos 12 piezas",
+        "descripcion": "Huevo Los Arcos 12 piezas",
+        "imagen": "/images/productos/12huevos.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Huevo Los Arcos 24 piezas",
+        "descripcion": "Huevo Los Arcos 18 piezas",
+        "imagen": "/images/productos/18huevos.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Huevo Los Arcos 30 piezas",
+        "descripcion": "Huevo Los Arcos 30 piezas",
+        "imagen": "/images/productos/30huevos.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Huevo Los Arcos 90 piezas",
+        "descripcion": "Huevo Los Arcos 90 piezas",
+        "imagen": "/images/productos/caja-90.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Huevo Los Arcos 360 piezas",
+        "descripcion": "Huevo Los Arcos 360 piezas",
+        "imagen": ""
+    }
+]

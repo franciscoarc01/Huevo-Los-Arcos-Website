@@ -21,10 +21,6 @@ import CardProductos from "../../components/CardProductos/index.js"
 import ClientesSatisfechosIcon from "../../assets/icons/clientes-satisfechos.svg"
 import AnnosExperienceIcon from "../../assets/icons/annos-experiencia.svg"
 import HuevosDiariosIcon from "../../assets/icons/huevos-diarios.svg"
-import huevos12 from "../../assets/12huevos.jpg"
-import huevos18 from "../../assets/18huevos.jpg"
-import huevos30 from "../../assets/30huevos.jpg"
-import caja90 from "../../assets/caja-90.png"
 import { Nosotros } from "./Nosotros.jsx"
 import { Calidad } from "./Calidad.jsx"
 import { Distribucion } from "./Distribucion.jsx"
@@ -33,6 +29,7 @@ import { Recetas } from "./Recetas.jsx"
 import { Ventas } from "./Ventas.jsx"
 import { Helmet } from "react-helmet-async";
 import { Productos } from "./Productos.jsx"
+import { ProductoVista } from "./ProductoVista.jsx"
 
 const slides = [
     { id: 1, url: HOTCAKES },
@@ -80,6 +77,7 @@ class Inicio extends Component {
                         <Route path="contacto" element={<Contacto />} />
                         <Route path="recetas" element={<Recetas />} />
                         <Route path="productos" element={<Productos />} />
+                        <Route path="productos/:id" element={<ProductoVista />} />
                     </Routes>
                 </section>
                 <FooterHuevo />
@@ -112,7 +110,7 @@ const Contenido = () => {
                         nutritivos y de la más alta calidad.
                     </p>
                     <div>
-                        <BotonAHuevo linkTo="#">CONOCE NUESTROS PRODUCTOS <span>&gt;</span></BotonAHuevo>
+                        <BotonAHuevo linkTo="/huevo/productos">CONOCE NUESTROS PRODUCTOS <span>&gt;</span></BotonAHuevo>
                     </div>
                 </div>
             </div>
@@ -173,41 +171,41 @@ const Contenido = () => {
                         "flex gap-2vmax"
                 }>
                     <CardProductos
-                        image={productos.huevos12}
+                        image={"/images/productos/12huevos.jpg"}
                         title="12 PIEZAS"
                         buttonProps={
                             {
-                                linkTo: "#",
+                                linkTo: "/huevo/productos/1",
                                 btnlabel: "VER PRODUCTO",
                                 className: isMobile ? "mg-bottom-7pct" : "mg-bottom-10pct"
                             }
                         } />
                     <CardProductos
-                        image={productos.huevos18}
+                        image={"/images/productos/18huevos.jpg"}
                         title="24 PIEZAS"
                         buttonProps={
                             {
-                                linkTo: "#",
+                                linkTo: "/huevo/productos/2",
                                 btnlabel: "VER PRODUCTO",
                                 className: isMobile ? "mg-bottom-7pct" : "mg-bottom-10pct"
                             }
                         } />
                     <CardProductos
-                        image={productos.huevos30}
+                        image={"/images/productos/30huevos.jpg"}
                         title="30 PIEZAS"
                         buttonProps={
                             {
-                                linkTo: "#",
+                                linkTo: "/huevo/productos/3",
                                 btnlabel: "VER PRODUCTO",
                                 className: isMobile ? "mg-bottom-7pct" : "mg-bottom-10pct"
                             }
                         } />
                     <CardProductos
-                        image={productos.caja90}
+                        image={"/images/productos/caja-90.png"}
                         title="CAJA 90 PIEZAS"
                         buttonProps={
                             {
-                                linkTo: "#",
+                                linkTo: "/huevo/productos/4",
                                 btnlabel: "VER PRODUCTO",
                                 className: isMobile ? "mg-bottom-7pct" : "mg-bottom-10pct"
                             }
