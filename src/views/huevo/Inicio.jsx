@@ -103,7 +103,7 @@ const Contenido = () => {
                         nutritivos y de la más alta calidad.
                     </p>
                     <div>
-                        <BotonAHuevo linkTo="/huevo/productos">CONOCE NUESTROS PRODUCTOS <span>&rarr;</span></BotonAHuevo>
+                        <BotonAHuevo linkTo="/huevo/productos">CONOCE NUESTROS PRODUCTOS →</BotonAHuevo>
                     </div>
                 </div>
             </div>
