@@ -1,8 +1,6 @@
-import productosData from "../../../public/mocks/productos.json"
 
 export const getProductoById = (id) => {
-    return new Promise((resolve) => {
-        const data = productosData.find(producto => producto.id == id)
-        resolve(data)
-    })
+    return fetch("/mocks/productos.json")
+        .then(response => response.json())
+        .then(data => data.find(producto => producto.id == id))
 }

@@ -8,6 +8,10 @@
         padding-left: 4rem;
         padding-right: 4rem;
     }
+
+    .hero-content-productos {
+        min-height: 100dvh;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -15,13 +19,44 @@
         padding-left: 7%;
         padding-right: 7%;
     }
+
+    .hero-content-productos {
+        min-height: 30dvh;
+    }
 }
+
+.hero-section-productos {
+    text-align: center;
+    color: #fff;
+    background-image: url('/src/assets/productos-hero.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: left;
+    align-items: end;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.hero-content-productos {
+    align-content: center;
+    width: 100dvw;
+    z-index: 2;
+
+    h3 {
+        color: rgb(241, 192, 20);
+        font-size: 40pt;
+    }
+}
+
 
 #descripcion-productos {
     color: black;
     background-color: #f5f1e6;
     font-size: 17pt;
-    padding-bottom: 12vmin;
+    padding-bottom: 5vmin;
+    padding-top: 5vmin;
 }
 
 #productos-grid {

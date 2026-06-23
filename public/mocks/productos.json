@@ -2,31 +2,101 @@
     {
         "id": 1,
         "nombre": "Huevo Los Arcos 12 piezas",
-        "descripcion": "Huevo Los Arcos 12 piezas",
+        "descripcion": [
+            "Declaración Nutrimental",
+            "Contenido energético por envase: 954 kcal (3,996 kJ) aprox.",
+            "Tamaño de la porción: 100 g",
+            "Cantidad por 100 g",
+            "Contenido energético: 159 kcal (666 kJ)",
+            "Proteínas: 12.6 g",
+            "Grasas totales: 10.6 g",
+            "Grasas saturadas: 3.1 g",
+            "Grasas trans: 0 g",
+            "Carbohidratos disponibles: 1.1 g",
+            "Azúcares: 1.1 g",
+            "Sodio: 124 mg",
+            "Contenido neto aproximado: 600 g"
+        ],
         "imagen": "/images/productos/12huevos.jpg"
     },
     {
         "id": 2,
         "nombre": "Huevo Los Arcos 24 piezas",
-        "descripcion": "Huevo Los Arcos 18 piezas",
+        "descripcion": [
+            "Declaración Nutrimental",
+            "Contenido energético por envase: 1,908 kcal (7,992 kJ) aprox.",
+            "Tamaño de la porción: 100 g",
+            "Cantidad por 100 g",
+            "Contenido energético: 159 kcal (666 kJ)",
+            "Proteínas: 12.6 g",
+            "Grasas totales: 10.6 g",
+            "Grasas saturadas: 3.1 g",
+            "Grasas trans: 0 g",
+            "Carbohidratos disponibles: 1.1 g",
+            "Azúcares: 1.1 g",
+            "Sodio: 124 mg",
+            "Contenido neto aproximado: 1200 g"
+        ],
         "imagen": "/images/productos/18huevos.jpg"
     },
     {
         "id": 3,
         "nombre": "Huevo Los Arcos 30 piezas",
-        "descripcion": "Huevo Los Arcos 30 piezas",
+        "descripcion": [
+            "Declaración Nutrimental",
+            "Contenido energético por envase: 2,385 kcal (9,990 kJ) aprox.",
+            "Tamaño de la porción: 100 g",
+            "Cantidad por 100 g",
+            "Contenido energético: 159 kcal (666 kJ)",
+            "Proteínas: 12.6 g",
+            "Grasas totales: 10.6 g",
+            "Grasas saturadas: 3.1 g",
+            "Grasas trans: 0 g",
+            "Carbohidratos disponibles: 1.1 g",
+            "Azúcares: 1.1 g",
+            "Sodio: 124 mg",
+            "Contenido neto aproximado: 1500 g"
+        ],
         "imagen": "/images/productos/30huevos.jpg"
     },
     {
         "id": 4,
         "nombre": "Huevo Los Arcos 90 piezas",
-        "descripcion": "Huevo Los Arcos 90 piezas",
+        "descripcion": [
+            "Declaración Nutrimental",
+            "Contenido energético por envase: 7155 kcal (29,970 kJ) aprox.",
+            "Tamaño de la porción: 100 g",
+            "Cantidad por 100 g",
+            "Contenido energético: 159 kcal (666 kJ)",
+            "Proteínas: 12.6 g",
+            "Grasas totales: 10.6 g",
+            "Grasas saturadas: 3.1 g",
+            "Grasas trans: 0 g",
+            "Carbohidratos disponibles: 1.1 g",
+            "Azúcares: 1.1 g",
+            "Sodio: 124 mg",
+            "Contenido neto aproximado: 4500 g"
+        ],
         "imagen": "/images/productos/caja-90.png"
     },
     {
         "id": 5,
         "nombre": "Huevo Los Arcos 360 piezas",
-        "descripcion": "Huevo Los Arcos 360 piezas",
-        "imagen": ""
+        "descripcion": [
+            "Declaración Nutrimental",
+            "CContenido energético por envase: 28,620 kcal (119,880 kJ) aprox.",
+            "Tamaño de la porción: 100 g",
+            "Cantidad por 100 g",
+            "Contenido energético: 159 kcal (666 kJ)",
+            "Proteínas: 12.6 g",
+            "Grasas totales: 10.6 g",
+            "Grasas saturadas: 3.1 g",
+            "Grasas trans: 0 g",
+            "Carbohidratos disponibles: 1.1 g",
+            "Azúcares: 1.1 g",
+            "Sodio: 124 mg",
+            "Contenido neto aproximado: 18000 g"
+        ],
+        "imagen": "/images/productos/caja-360.png"
     }
 ]

@@ -157,6 +157,10 @@ code {
   }
 }
 
+.inline-start {
+  float: inline-start;
+}
+
 .text-decoration-none {
   text-decoration: none;
 }
@@ -273,4 +277,13 @@ code {
 
 .align-items-center {
   align-items: center;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }

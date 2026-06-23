@@ -39,13 +39,6 @@ const slides = [
     { id: 5, url: Mayonesa }
 ];
 
-const productos = {
-    huevos12,
-    huevos18,
-    huevos30,
-    caja90
-}
-
 class Inicio extends Component {
 
     componentDidMount() {
@@ -110,7 +103,7 @@ const Contenido = () => {
                         nutritivos y de la más alta calidad.
                     </p>
                     <div>
-                        <BotonAHuevo linkTo="/huevo/productos">CONOCE NUESTROS PRODUCTOS <span>&gt;</span></BotonAHuevo>
+                        <BotonAHuevo linkTo="/huevo/productos">CONOCE NUESTROS PRODUCTOS <span>&rarr;</span></BotonAHuevo>
                     </div>
                 </div>
             </div>

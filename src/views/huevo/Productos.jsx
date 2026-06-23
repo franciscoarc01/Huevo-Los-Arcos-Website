@@ -28,11 +28,12 @@ class Productos extends Component {
     render() {
         return (
             <section>
-                {/* <div className="hero-section-inicio"> */}
-                {/* <div className="hero-overlay"></div> */}
-                {/* <div className="hero-content-inicio"> */}
-                {/* </div> */}
-                {/* </div> */}
+                <div className="hero-section-productos">
+                    <div className="hero-overlay"></div>
+                    <div className="hero-content-productos">
+                        <h3>Productos</h3>
+                    </div>
+                </div>
                 <p id="descripcion-productos">Contamos con diferentes presentaciones de huevo para toda opción de consumo</p>
                 <section id="productos-grid">
                     <CardProductos
@@ -76,7 +77,7 @@ class Productos extends Component {
                             }
                         } />
                     <CardProductos
-                        image={""}
+                        image={"/images/productos/caja-360.png"}
                         title="360 piezas"
                         buttonProps={
                             {
