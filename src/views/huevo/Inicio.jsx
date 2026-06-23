@@ -32,11 +32,11 @@ import { Productos } from "./Productos.jsx"
 import { ProductoVista } from "./ProductoVista.jsx"
 
 const slides = [
-    { id: 1, url: HOTCAKES },
-    { id: 2, url: PanDeMuerto },
-    { id: 3, url: PanDeDulce },
-    { id: 4, url: Pastel },
-    { id: 5, url: Mayonesa }
+    { id: 1, path: HOTCAKES, url: "/huevo/recetas/" },
+    { id: 2, path: PanDeMuerto, url: "/huevo/recetas/" },
+    { id: 3, path: PanDeDulce, url: "/huevo/recetas/" },
+    { id: 4, path: Pastel, url: "/huevo/recetas/" },
+    { id: 5, path: Mayonesa, url: "/huevo/recetas/" }
 ];
 
 class Inicio extends Component {

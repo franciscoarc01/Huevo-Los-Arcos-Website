@@ -60,9 +60,9 @@ export function Carousel({ images, visible, isMobile }) {
                   overflow: "hidden",
                 }}
               >
-                <Link to="#">
+                <Link to={image.url}>
                   <img
-                    src={image.url}
+                    src={image.path}
                     alt={image.title}
                     loading="lazy"
                     style={{
