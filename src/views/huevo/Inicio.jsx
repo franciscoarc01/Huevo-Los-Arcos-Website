@@ -69,8 +69,10 @@ class Inicio extends Component {
                         <Route path="distribucion" element={<Distribucion />} />
                         <Route path="contacto" element={<Contacto />} />
                         <Route path="recetas" element={<Recetas />} />
-                        <Route path="productos" element={<Productos />} />
-                        <Route path="productos/:id" element={<ProductoVista />} />
+                        <Route path="productos">
+                            <Route index element={<Productos />} />
+                            <Route path=":id" element={<ProductoVista />} />
+                        </Route>
                     </Routes>
                 </section>
                 <FooterHuevo />
@@ -204,7 +206,7 @@ const Contenido = () => {
                             }
                         } />
                 </section>
-                <BotonAHuevo linkTo="#" className={isMobile ? "mg-bottom-7pct" : ""}>VER TODOS LOS PRODUCTOS</BotonAHuevo>
+                <BotonAHuevo linkTo="/huevo/productos" className={isMobile ? "mg-bottom-7pct" : ""}>VER TODOS LOS PRODUCTOS</BotonAHuevo>
             </div>
             <div id="container-sobre-nosotros" className={isMobile ? "block" : "flex"}>
                 <div id="imagen-sobre-nosotros">

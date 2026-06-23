@@ -31,11 +31,11 @@ const FooterHuevo = () => {
                 <div>
                     <h3 className="text-left">PRODUCTOS</h3>
                     <ul>
-                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Charola de 12</Link></li>
-                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Charola de 18</Link></li>
-                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Charola de 30</Link></li>
-                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Caja de 90</Link></li>
-                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/">Caja de 360</Link></li>
+                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/productos/1">Charola de 12</Link></li>
+                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/productos/2">Charola de 24</Link></li>
+                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/productos/3">Charola de 30</Link></li>
+                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/productos/4">Caja de 90</Link></li>
+                        <li className="list-style-none text-left"><Link className="text-decoration-none" to="/huevo/productos/5">Caja de 360</Link></li>
                     </ul>
                 </div>
                 <div>

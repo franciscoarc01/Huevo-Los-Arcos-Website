@@ -37,10 +37,20 @@ class ProductoVistaClass extends Component {
         });
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.params.id !== prevProps.params.id) {
+            getProductoById(this.props.params.id).then(data => {
+                console.log("data", data)
+                this.setState({ product: data })
+            })
+                .catch(err => console.log(err))
+        }
+    }
+
     render() {
         return (
             <>
-                <Link to="/huevo/productos" className="text-decoration-none link-regresar">← Regresar</Link>
+                <Link to={-1} className="text-decoration-none link-regresar">← Regresar</Link>
                 <section className="title-container">
                     <h2 id="nombre-producto">{this.state.product.nombre}</h2>
                 </section>
