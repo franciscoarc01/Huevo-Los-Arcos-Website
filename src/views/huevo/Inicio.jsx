@@ -1,4 +1,4 @@
-import { Component, useEffect, useState } from "react"
+import { Component, useEffect, useState, useRef } from "react"
 import { Routes, Route, Link } from "react-router-dom"
 import FooterHuevo from "../../components/FooterHuevo/index"
 import HeaderHuevo from "../../components/HeaderHuevo/index"
@@ -83,7 +83,7 @@ class Inicio extends Component {
 
 const Contenido = () => {
     const [isMobile, setIsMobile] = useState(false);
-
+    const ref = useRef(null)
     useEffect(() => {
         function handleResize() {
             setIsMobile(window.innerWidth < 600); // Define 768px como el breakpoint para móviles

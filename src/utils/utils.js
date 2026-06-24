@@ -1,4 +1,4 @@
-import { createElement } from "react";
+import { createElement, useRef } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom"
 
 export const withRouter = ComponentParam => {
@@ -6,7 +6,8 @@ export const withRouter = ComponentParam => {
         const navigate = useNavigate()
         const location = useLocation()
         const params = useParams()
-        return createElement(ComponentParam, { ...props, navigate, location, params }, props.children)
+        const ref = useRef(null)
+        return createElement(ComponentParam, { ...props, navigate, location, params, ref }, props.children)
     }
     return ComponentWithRouterProp
 }

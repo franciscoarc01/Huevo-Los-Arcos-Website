@@ -5,6 +5,8 @@ import { BotonAHuevo } from "../../components/BotonAHuevo/BotonAHuevo.jsx";
 import { Link } from "react-router-dom";
 import carritoIcon from "../../components/HeaderHuevo/icons/shopping-cart.svg"
 import "./ProductoVista.scss"
+import Loader from "../../components/Loader/index.js"
+import Styles from "../../utils/styles.js"
 
 class ProductoVistaClass extends Component {
 
@@ -13,6 +15,7 @@ class ProductoVistaClass extends Component {
         this.state = {
             product: {},
             isMobile: window.innerWidth < 600,
+            isLoad: false,
         }
         this.handleResize = this.handleResize.bind(this);
         console.log("props", props)
@@ -47,9 +50,14 @@ class ProductoVistaClass extends Component {
         }
     }
 
+    cargado(event) {
+        this.setState({ isLoad: true })
+    }
+
     render() {
         return (
             <>
+                <Loader style={{ ...Styles.overlayLoading, display: !this.state.isLoad ? "flex" : "none", }} />
                 <Link to={-1} className="text-decoration-none link-regresar">← Regresar</Link>
                 <section className="title-container">
                     <h2 id="nombre-producto">{this.state.product.nombre}</h2>
@@ -67,7 +75,7 @@ class ProductoVistaClass extends Component {
                         <BotonAHuevo linkTo="#" className={"block mx-auto"}>
                             Comprar
                             <span>
-                                <img src={carritoIcon} alt="carrito icon" id="carrito-icon" />
+                                <img src={carritoIcon} alt="carrito icon" id="carrito-icon" onLoad={this.cargado.bind(this)} />
                             </span>
                         </BotonAHuevo>
                     </section>
