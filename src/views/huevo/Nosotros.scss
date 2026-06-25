@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     text-align: center;
     color: #ffffff;
 }
@@ -31,7 +31,7 @@
     float: left;
     z-index: 2;
     padding-bottom: 2%;
-    min-width: 100%;
+    max-width: 95%;
 }
 
 
@@ -80,19 +80,18 @@
 
             p {
                 text-align: left;
+                font-size: 12pt;
+                width: 30dvw;
             }
         }
 
-        p {
-            font-size: 11pt;
-        }
     }
 
     #valores-container {
         border-top: 0.01rem solid #B0B0AC;
 
         p {
-            font-size: 11pt;
+            font-size: 12pt;
 
         }
 
@@ -125,7 +124,7 @@
         width: 50%;
 
         p {
-            font-size: 11pt;
+            font-size: 12pt;
         }
     }
 
@@ -174,11 +173,15 @@
         p {
             font-size: 15pt;
             line-height: 1.4;
+            width: 70dvw;
+            margin-right: 1rem;
         }
 
         h2 {
             text-align: center;
         }
+
+        max-width: 100dvw;
     }
 
     #mision,
@@ -188,6 +191,7 @@
         padding-bottom: 2vmax;
 
         .icon-container {
+            align-content: center;
             margin-left: 2%;
         }
     }
@@ -211,6 +215,7 @@
             }
 
             .icon-container {
+
                 img {
                     max-width: 7vmax;
                     height: auto;
@@ -246,13 +251,8 @@
             font-weight: bold;
         }
 
-        #iconVision {
-            img {
-                max-width: 75%;
-            }
-        }
-
         .icon-container {
+
             img {
                 max-width: 100%;
                 height: auto;

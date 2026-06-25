@@ -30,6 +30,9 @@ import { Ventas } from "./Ventas.jsx"
 import { Helmet } from "react-helmet-async";
 import { Productos } from "./Productos.jsx"
 import { ProductoVista } from "./ProductoVista.jsx"
+import { waitForImages } from "../../utils/logica.js"
+import Styles from "../../utils/styles.js"
+import Loader from "../../components/Loader/index.js"
 
 const slides = [
     { id: 1, path: HOTCAKES, url: "/huevo/recetas/" },
@@ -83,20 +86,25 @@ class Inicio extends Component {
 
 const Contenido = () => {
     const [isMobile, setIsMobile] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
     const ref = useRef(null)
     useEffect(() => {
         function handleResize() {
-            setIsMobile(window.innerWidth < 600); // Define 768px como el breakpoint para móviles
+            setIsMobile(window.innerWidth < 600); // Define 600px como el breakpoint para móviles
         }
 
         window.addEventListener('resize', handleResize);
         handleResize(); // Llamada inicial para establecer el estado correcto
-
+        console.log(ref)
+        waitForImages(ref).then(() => {
+            setIsLoaded(true)
+        });
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return (
-        <div>
+        <div ref={ref}>
+            <Loader style={{ ...Styles.overlayLoading, opacity: !isLoaded ? 1 : 0, visibility: !isLoaded ? "visible" : "hidden" }} />
             <div className="hero-section-inicio">
                 {/* <div className="hero-overlay"></div> */}
                 <div className="hero-content-inicio">
@@ -114,7 +122,7 @@ const Contenido = () => {
                     "block" :
                     "inline-flex"} id="puntos-clave">
                 <div className="punto-clave">
-                    <img src={HojaIcon} className="iconos-clave" />
+                    <img src={HojaIcon} className="iconos-clave" loading="eager" fetchpriority="high" />
                     <div>
                         <text className="punto-clave-titulo">100% NATURALES</text>
                         <p className="punto-clave-descripcion">
@@ -124,7 +132,7 @@ const Contenido = () => {
                     </div>
                 </div>
                 <div className="punto-clave">
-                    <img src={PolloIcon} className="iconos-clave" />
+                    <img src={PolloIcon} className="iconos-clave" loading="eager" fetchpriority="high" />
                     <div>
                         <text className="punto-clave-titulo">FRESCOS TODOS LOS DIAS</text>
                         <p className="punto-clave-descripcion">
@@ -134,7 +142,7 @@ const Contenido = () => {
                     </div>
                 </div>
                 <div className="punto-clave">
-                    <img src={ShieldCheckIcon} className="iconos-clave" />
+                    <img src={ShieldCheckIcon} className="iconos-clave" loading="eager" fetchpriority="high" />
                     <div>
                         <text className="punto-clave-titulo">ALTOS ESTÁNDARES</text>
                         <p className="punto-clave-descripcion">
@@ -144,7 +152,7 @@ const Contenido = () => {
                     </div>
                 </div>
                 <div className="punto-clave">
-                    <img src={CorazonIcon} className="iconos-clave" />
+                    <img src={CorazonIcon} className="iconos-clave" loading="eager" fetchpriority="high" />
                     <div>
                         <text className="punto-clave-titulo">NUTRITIVOS Y SALUDABLES</text>
                         <p className="punto-clave-descripcion">
@@ -210,7 +218,7 @@ const Contenido = () => {
             </div>
             <div id="container-sobre-nosotros" className={isMobile ? "block" : "flex"}>
                 <div id="imagen-sobre-nosotros">
-                    <img src={imagenNosotros} />
+                    <img src={imagenNosotros} loading="eager" fetchpriority="high" />
                 </div>
                 <section id="sobre-nosotros-info">
                     <section>
@@ -225,13 +233,13 @@ const Contenido = () => {
                     </section>
                     <section className="flex">
                         <div className="sobre-nosotros-icons">
-                            <img src={ClientesSatisfechosIcon} />
+                            <img src={ClientesSatisfechosIcon} loading="eager" fetchpriority="high" />
                         </div>
                         <div className="sobre-nosotros-icons">
-                            <img src={HuevosDiariosIcon} />
+                            <img src={HuevosDiariosIcon} loading="eager" fetchpriority="high" />
                         </div>
                         <div className="sobre-nosotros-icons">
-                            <img src={AnnosExperienceIcon} />
+                            <img src={AnnosExperienceIcon} loading="eager" fetchpriority="high" />
                         </div>
                     </section>
                     <BotonAHuevo linkTo="/huevo/nosotros">CONOCE MAS DE NOSOTROS</BotonAHuevo>
@@ -247,7 +255,7 @@ const Contenido = () => {
             </section>
             <section id="prefooter" className={isMobile ? "block" : "flex"}>
                 <div className="inline-flex" id="distribuidor-container">
-                    <img src={CamionIcon} className="footer-icons camion-icon" />
+                    <img src={CamionIcon} className="footer-icons camion-icon" loading="eager" fetchpriority="high" />
                     <div>
                         <h2>¿ERES DISTRIBUIDOR?</h2>
                         <p>Unete a nuestra red de distribución y lleva calidad a mas hogares</p>
@@ -255,7 +263,7 @@ const Contenido = () => {
                     </div>
                 </div>
                 <div className="inline-flex" id="notipromos-container">
-                    <img src={CorreoIcon} className="footer-icons" />
+                    <img src={CorreoIcon} className="footer-icons" loading="eager" fetchpriority="high" />
                     <div>
                         <h2>RECIBE NOTICIAS Y PROMOCIONES</h2>
                         <p>Suscríbete y recibe recetas, tips y beneficios exclusivos</p>

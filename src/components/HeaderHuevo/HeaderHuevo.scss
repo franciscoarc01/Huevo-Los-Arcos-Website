@@ -5,7 +5,8 @@
         left: 0;
         background-color: white;
         width: stretch;
-        transition: display 0.2s ease-in-out;
+        transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        display: block;
 
         ul {
             margin-top: 0;
@@ -86,6 +87,7 @@
 
         img {
             width: 100%;
+            cursor: pointer;
         }
     }
 

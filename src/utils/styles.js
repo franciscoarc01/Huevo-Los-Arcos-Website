@@ -5,11 +5,12 @@ export default {
         left: 0,
         width: '100%',
         minHeight: '100%',
-        background: 'rgba(26, 32, 44, 0.97)',
+        background: 'rgba(26, 32, 44, 1)',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         zIndex: 4,
-        transition: 'opacity 0.3s ease',
+        transition: 'opacity 0.15s ease-in, visibility 0.15s ease-in',
+        display: 'flex',
     }
 }

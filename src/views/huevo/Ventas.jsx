@@ -1,19 +1,33 @@
 import { Component } from "react";
 import './Ventas.scss';
+import { waitForImages } from "../../utils/logica.js"
+import Loader from "../../components/Loader/index.js"
+import Styles from "../../utils/styles.js"
 
 class Ventas extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLoaded: false,
+        }
+    }
+
+    componentDidMount() {
+        waitForImages(null).then(() => {
+            this.setState({ isLoaded: true });
+        });
+    }
+
     render() {
         return (
             <>
+                <Loader style={{ ...Styles.overlayLoading, opacity: !this.state.isLoaded ? 1 : 0, visibility: !this.state.isLoaded ? "visible" : "hidden", }} />
                 <div className="hero-section-ventas">
                     <div className="hero-overlay"></div>
                     <div className="hero-content-ventas">
                         <p>
                             Ventas
                         </p>
-                        <div>
-                            {/* <BotonAHuevo linkTo="#">CONOCE NUESTROS PRODUCTOS <span>&gt;</span></BotonAHuevo> */}
-                        </div>
                     </div>
                 </div>
                 <div id="empresa-container">

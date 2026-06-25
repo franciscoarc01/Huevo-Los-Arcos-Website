@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, createRef } from "react";
 import "./Recetas.scss"
 import { Link } from "react-router-dom";
 import CardRecetas from "../../components/CardRecetas/index.js";
@@ -20,6 +20,9 @@ import imgTortillaEspañola from "../../assets/tortilla-espannola.jpg"
 import imgHuevosALaMexicana from "../../assets/huevos-mexicana.jpg"
 import imgTacoHuevoChorizo from "../../assets/taco-huevo-chorizo.jpg"
 import imgFlanNapolitano from "../../assets/flan-napolitano.jpg"
+import Loader from "../../components/Loader/index.js"
+import Styles from "../../utils/styles.js"
+import { waitForImages } from "../../utils/logica.js"
 
 class Recetas extends Component {
 
@@ -41,22 +44,31 @@ class Recetas extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMobile: false
+            isMobile: false,
+            isLoaded: false,
         }
+        this.ref = createRef()
     }
 
     componentDidMount() {
         this.handleResize();
         window.addEventListener('resize', this.handleResize);
+        waitForImages(this.ref).then(() => {
+            this.setState({ isLoaded: true });
+        }).catch((e) => {
+            console.log(e);
+            this.setState({ isLoaded: true });
+        });
     }
 
     handleResize = () => {
-        this.setState({ isMobile: window.innerWidth < 768 });
+        this.setState({ isMobile: window.innerWidth < 600 });
     }
 
     render() {
         return (
-            <section>
+            <section ref={this.ref}>
+                <Loader style={{ ...Styles.overlayLoading, opacity: !this.state.isLoaded ? 1 : 0, visibility: !this.state.isLoaded ? "visible" : "hidden", }} />
                 <div className="hero-section-recetas">
                     <div className="hero-overlay"></div>
                     <div className="hero-content-recetas">
@@ -74,7 +86,7 @@ class Recetas extends Component {
                         </Link>
                         <Link className="text-decoration-none">
                             <Card className="card-etiquetas">
-                                <img src={this.icons.iconSarten} alt="sandwich" />
+                                <img src={this.icons.iconSarten} alt="sarten" />
                                 <h2>Huevos al gusto</h2>
                             </Card>
                         </Link>
@@ -162,7 +174,7 @@ class Recetas extends Component {
                                 </section>
                                 <section>
                                     <div>
-                                        <img src={this.icons.iconTienda} />
+                                        <img src={this.icons.iconTienda} alt="tienda" />
                                     </div>
                                     <h4>Disponible en tu tienda favorita</h4>
                                 </section>
@@ -173,7 +185,6 @@ class Recetas extends Component {
                                 <h2>Descarga gratis nuestro recetario</h2>
                                 <div>
                                     <p className="descripcion">Más de 50 recetas prácticas para todos los días</p>
-                                    <img src="" alt="" />
                                     <a href="/downloads/Recetario.pdf" download="Recetario.pdf" className="text-decoration-none"><section>Descargar Recetario</section></a>
                                 </div>
                             </section>

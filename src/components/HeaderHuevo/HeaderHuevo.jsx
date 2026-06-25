@@ -32,10 +32,13 @@ const HeaderHuevo = () => {
                     isMobile ?
                         showMenu ?
                             {
-                                display: "block",
+                                opacity: 1, visibility: "visible",
                                 top: `${document.getElementById("header-huevo").offsetHeight}px`,
                             } :
-                            { display: "none" } :
+                            {
+                                opacity: 0, visibility: "hidden",
+                                top: `${document.getElementById("header-huevo").offsetHeight}px`
+                            } :
                         {}}>
                     <ul >
                         <li><Link onClick={() => setShowMenu(false)} className="text-decoration-none itemHeader" to="/huevo/ventas">VENTAS</Link></li>

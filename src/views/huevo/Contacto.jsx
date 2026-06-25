@@ -1,14 +1,34 @@
-import { Component } from "react";
+import { Component, createRef } from "react";
 import { Link } from "react-router-dom";
 import './Contacto.scss';
 import Card from "../../components/Card/index.js";
 import FacebookIcon from "../../components/FooterHuevo/icons/facebook-brands-solid-full.svg"
 import InstagramIcon from "../../components/FooterHuevo/icons/instagram-brands-solid-full.svg"
+import Loader from "../../components/Loader/index.js"
+import Styles from "../../utils/styles.js"
+import { waitForImages } from "../../utils/logica.js"
 
 class Contacto extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLoaded: false,
+        }
+        this.ref = createRef()
+    }
+
+    componentDidMount() {
+        waitForImages(this.ref).then(() => {
+            this.setState({ isLoaded: true });
+        }).catch((e) => {
+            console.log(e);
+            this.setState({ isLoaded: true });
+        });
+    }
     render() {
         return (
-            <section id="contacto-container">
+            <section id="contacto-container" ref={this.ref}>
+                <Loader style={{ ...Styles.overlayLoading, opacity: !this.state.isLoaded ? 1 : 0, visibility: !this.state.isLoaded ? "visible" : "hidden", }} />
                 <section className="hero-section-contacto">
                     <div className="hero-overlay"></div>
                     <div className="hero-content-contacto">
@@ -94,21 +114,18 @@ class Contacto extends Component {
                         <section className="contact-info-cards">
                             <Card className="info-card">
                                 <div>
-                                    <img />
                                     <h2 className="titulo-contacto-card">Teléfono / WhatsApp</h2>
                                 </div>
                                 <label>+52 442 780 6888</label>
                             </Card>
                             <Card className="info-card">
                                 <div>
-                                    <img />
                                     <h2 className="titulo-contacto-card">Correo electrónico</h2>
                                 </div>
                                 <Link className="text-decoration-none" id="link-correo" to="mailto:contacto@huevolosarcos.net" target="_blank">contacto@huevolosarcos.net</Link>
                             </Card>
                             <Card className="info-card">
                                 <div>
-                                    <img />
                                     <h2 className="titulo-contacto-card">Dirección</h2>
                                 </div>
                                 <label>

@@ -1,7 +1,10 @@
-import { Component } from "react"
+import { Component, createRef } from "react"
 import "./Calidad.scss"
 import Linea from "../../components/Linea/index.js"
 import porqueHuevoLosArcos from "../../assets/porque-huevos-los-arcos.jpg"
+import Loader from "../../components/Loader/index.js"
+import Styles from "../../utils/styles.js"
+import { waitForImages } from "../../utils/logica.js"
 
 const timeline = [
     (
@@ -29,22 +32,28 @@ class Calidad extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMobile: null
+            isMobile: null,
+            isLoaded: false,
         }
+        this.ref = createRef()
     }
 
     componentDidMount() {
         this.handleResize();
         window.addEventListener('resize', this.handleResize);
+        waitForImages(this.ref).then(() => {
+            this.setState({ isLoaded: true });
+        });
     }
 
     handleResize = () => {
-        this.setState({ isMobile: window.innerWidth < 768 });
+        this.setState({ isMobile: window.innerWidth < 600 });
     }
 
     render() {
         return (
-            <section>
+            <section ref={this.ref}>
+                <Loader style={{ ...Styles.overlayLoading, opacity: !this.state.isLoaded ? 1 : 0, visibility: !this.state.isLoaded ? "visible" : "hidden" }} />
                 <div className="hero-section-calidad">
                     <div className="hero-overlay"></div>
                     <div className="hero-content-calidad">

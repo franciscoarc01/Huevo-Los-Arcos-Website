@@ -1,18 +1,26 @@
-import { Component } from "react"
+import { Component, createRef } from "react"
 import "./Productos.scss"
 import CardProductos from "../../components/CardProductos"
+import Loader from "../../components/Loader/index.js"
+import Styles from "../../utils/styles.js"
+import { waitForImages } from "../../utils/logica.js"
 class Productos extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             isMobile: window.innerWidth < 600,
+            isLoaded: false,
         };
         this.handleResize = this.handleResize.bind(this);
+        this.ref = createRef()
     }
 
     componentDidMount() {
         window.addEventListener("resize", this.handleResize);
+        waitForImages(this.ref).then(() => {
+            this.setState({ isLoaded: true });
+        });
     }
 
     componentWillUnmount() {
@@ -27,7 +35,8 @@ class Productos extends Component {
 
     render() {
         return (
-            <section>
+            <section ref={this.ref}>
+                <Loader style={{ ...Styles.overlayLoading, opacity: !this.state.isLoaded ? 1 : 0, visibility: !this.state.isLoaded ? "visible" : "hidden" }} />
                 <div className="hero-section-productos">
                     <div className="hero-overlay"></div>
                     <div className="hero-content-productos">

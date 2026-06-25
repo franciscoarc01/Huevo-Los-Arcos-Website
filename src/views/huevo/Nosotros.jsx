@@ -1,6 +1,5 @@
-import { Component } from "react";
+import { Component, createRef } from "react";
 import "./Nosotros.scss";
-import BotonAHuevo from "../../components/BotonAHuevo/index.js";
 import huevo1 from "../../assets/img_huevos2.jpg"
 import iconMision from "../../assets/icons/mision.svg"
 import iconVision from "../../assets/icons/vision.svg"
@@ -11,6 +10,9 @@ import iconServicio from "../../assets/icons/servicio.svg"
 import iconInnovacion from "../../assets/icons/innovacion.svg"
 import iconResponsabilidad from "../../assets/icons/responsabilidad.svg"
 import iconEquipo from "../../assets/icons/equipo.svg"
+import Loader from "../../components/Loader/index.js"
+import Styles from "../../utils/styles.js"
+import { waitForImages } from "../../utils/logica.js"
 
 class Nosotros extends Component {
 
@@ -33,13 +35,18 @@ class Nosotros extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMobile: null
+            isMobile: null,
+            isLoaded: false,
         }
+        this.ref = createRef()
     }
 
     componentDidMount() {
         this.handleResize();
         window.addEventListener('resize', this.handleResize);
+        waitForImages(this.ref).then(() => {
+            this.setState({ isLoaded: true });
+        });
     }
 
     handleResize = () => {
@@ -48,7 +55,8 @@ class Nosotros extends Component {
 
     render() {
         return (
-            <div>
+            <div ref={this.ref}>
+                <Loader style={{ ...Styles.overlayLoading, opacity: !this.state.isLoaded ? 1 : 0, visibility: !this.state.isLoaded ? "visible" : "hidden" }} />
                 <div className="hero-section-nosotros">
                     <div className="hero-overlay"></div>
                     <div className="hero-content-nosotros">
@@ -99,7 +107,7 @@ class Nosotros extends Component {
                         </section>
                     </div>
                     <div id="vision" className="inline-flex">
-                        <section className="icon-container" id="iconVision">
+                        <section className="icon-container" >
                             <img src={this.icons.iconVision} alt="iconVision" />
                         </section>
                         <section>

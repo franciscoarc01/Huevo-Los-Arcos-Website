@@ -116,7 +116,6 @@
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    align-items: end;
     justify-content: left;
     text-align: center;
     color: #ffffff;
@@ -155,18 +154,24 @@
 @media screen and (max-width: 600px) {
     .hero-section-ventas {
         min-height: 70dvw;
+        align-items: baseline;
+        padding-top: 10%;
     }
 
     .hero-content-ventas {
         width: 100%;
 
-        p {
-            display: none;
-        }
+        // p {
+        //     display: none;
+        // }
     }
 }
 
 @media screen and (min-width: 600px) {
+    .hero-section-ventas {
+        align-items: end;
+    }
+
     .hero-content-ventas {
         min-height: 100dvh;
         align-content: baseline;

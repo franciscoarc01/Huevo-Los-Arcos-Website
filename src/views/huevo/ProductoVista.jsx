@@ -21,11 +21,15 @@ class ProductoVistaClass extends Component {
         console.log("props", props)
     }
 
+    scrollToTop() {
+        window.scrollTo(0, 0)
+    }
+
     componentDidMount() {
         window.addEventListener("resize", this.handleResize);
         getProductoById(this.props.params.id).then(data => {
             console.log("data", data)
-            this.setState({ product: data })
+            this.setState({ product: data }, this.scrollToTop)
         })
             .catch(err => console.log(err))
     }
@@ -44,7 +48,7 @@ class ProductoVistaClass extends Component {
         if (this.props.params.id !== prevProps.params.id) {
             getProductoById(this.props.params.id).then(data => {
                 console.log("data", data)
-                this.setState({ product: data })
+                this.setState({ product: data }, this.scrollToTop)
             })
                 .catch(err => console.log(err))
         }
@@ -57,7 +61,7 @@ class ProductoVistaClass extends Component {
     render() {
         return (
             <>
-                <Loader style={{ ...Styles.overlayLoading, display: !this.state.isLoad ? "flex" : "none", }} />
+                <Loader style={{ ...Styles.overlayLoading, opacity: !this.state.isLoad ? 1 : 0, visibility: !this.state.isLoad ? "visible" : "hidden", }} />
                 <Link to={-1} className="text-decoration-none link-regresar">← Regresar</Link>
                 <section className="title-container">
                     <h2 id="nombre-producto">{this.state.product.nombre}</h2>

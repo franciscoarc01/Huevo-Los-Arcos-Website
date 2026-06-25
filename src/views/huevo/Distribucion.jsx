@@ -1,4 +1,4 @@
-import { Component } from "react"
+import { Component, createRef } from "react"
 import "./Distribucion.scss"
 import foto1 from "../../assets/camiones.png"
 import foto2 from "../../assets/logistica.png"
@@ -13,6 +13,9 @@ import iconoEmpaque from "../../assets/icons/proceso-distribucion/2-2.png"
 import iconoDistribucion from "../../assets/icons/proceso-distribucion/3.png"
 import iconoPuntoVenta from "../../assets/icons/proceso-distribucion/4.png"
 import iconoConsumidorFinal from "../../assets/icons/proceso-distribucion/5.png"
+import Loader from "../../components/Loader/index.js"
+import Styles from "../../utils/styles.js"
+import { waitForImages } from "../../utils/logica.js"
 
 class Distribucion extends Component {
 
@@ -36,22 +39,28 @@ class Distribucion extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMobile: null
+            isMobile: null,
+            isLoaded: false,
         }
+        this.ref = createRef()
     }
 
     componentDidMount() {
         this.handleResize();
         window.addEventListener('resize', this.handleResize);
+        waitForImages(this.ref).then(() => {
+            this.setState({ isLoaded: true });
+        });
     }
 
     handleResize = () => {
-        this.setState({ isMobile: window.innerWidth < 768 });
+        this.setState({ isMobile: window.innerWidth < 600 });
     }
 
     render() {
         return (
-            <div id="distribucion-container">
+            <div id="distribucion-container" ref={this.ref}>
+                <Loader style={{ ...Styles.overlayLoading, opacity: !this.state.isLoaded ? 1 : 0, visibility: !this.state.isLoaded ? "visible" : "hidden", }} />
                 <div className="hero-section-distribucion">
                     {/* <div className="hero-overlay"></div> */}
                     <div className="hero-content-distribucion">
