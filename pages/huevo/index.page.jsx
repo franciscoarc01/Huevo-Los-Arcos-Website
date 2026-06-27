@@ -1,5 +1,4 @@
 import { Component, useEffect, useState, useRef } from "react"
-import { Routes, Route, Link } from "react-router-dom"
 import FooterHuevo from "../../components/FooterHuevo/index"
 import HeaderHuevo from "../../components/HeaderHuevo/index"
 import BotonAHuevo from "../../components/BotonAHuevo/index"
@@ -21,18 +20,10 @@ import CardProductos from "../../components/CardProductos/index.js"
 import ClientesSatisfechosIcon from "../../assets/icons/clientes-satisfechos.svg"
 import AnnosExperienceIcon from "../../assets/icons/annos-experiencia.svg"
 import HuevosDiariosIcon from "../../assets/icons/huevos-diarios.svg"
-import { Nosotros } from "./Nosotros.jsx"
-import { Calidad } from "./Calidad.jsx"
-import { Distribucion } from "./Distribucion.jsx"
-import { Contacto } from "./Contacto.jsx"
-import { Recetas } from "./Recetas.jsx"
-import { Ventas } from "./Ventas.jsx"
 import { Helmet } from "react-helmet-async";
-import { Productos } from "./Productos.jsx"
-import { ProductoVista } from "./ProductoVista.jsx"
 import { waitForImages } from "../../utils/logica.js"
 import Styles from "../../utils/styles.js"
-import Loader from "../../components/Loader/index.js"
+// import Loader from "../../components/Loader/index.js"
 
 const slides = [
     { id: 1, path: HOTCAKES, url: "/huevo/recetas/" },
@@ -64,19 +55,7 @@ class Inicio extends Component {
                 </Helmet>
                 <section className="relative">
                     <HeaderHuevo />
-                    <Routes basename="huevo">
-                        <Route path="/" element={<Contenido />} />
-                        <Route path="ventas" element={<Ventas />} />
-                        <Route path="nosotros" element={<Nosotros />} />
-                        <Route path="calidad" element={<Calidad />} />
-                        <Route path="distribucion" element={<Distribucion />} />
-                        <Route path="contacto" element={<Contacto />} />
-                        <Route path="recetas" element={<Recetas />} />
-                        <Route path="productos">
-                            <Route index element={<Productos />} />
-                            <Route path=":id" element={<ProductoVista />} />
-                        </Route>
-                    </Routes>
+                    <Contenido />
                 </section>
                 <FooterHuevo />
             </>
@@ -104,7 +83,7 @@ const Contenido = () => {
 
     return (
         <div ref={ref}>
-            <Loader style={{ ...Styles.overlayLoading, opacity: !isLoaded ? 1 : 0, visibility: !isLoaded ? "visible" : "hidden" }} />
+            {/* <Loader style={{ ...Styles.overlayLoading, opacity: !isLoaded ? 1 : 0, visibility: !isLoaded ? "visible" : "hidden" }} /> */}
             <div className="hero-section-inicio">
                 {/* <div className="hero-overlay"></div> */}
                 <div className="hero-content-inicio">
@@ -249,7 +228,7 @@ const Contenido = () => {
                 <div id="recetas-texto">
                     <h2>RECETAS QUE INSPIRAN</h2>
                     <p>Descubre deliciosas recetas hechas con Huevos Los Arcos</p>
-                    <Link to={"/huevo/recetas"}><div>VER RECETAS</div></Link>
+                    <a href={"/huevo/recetas"}><div>VER RECETAS</div></a>
                 </div>
                 <Carousel images={slides} visible={isMobile ? 1 : 3} isMobile={isMobile} />
             </section>
@@ -259,7 +238,7 @@ const Contenido = () => {
                     <div>
                         <h2>¿ERES DISTRIBUIDOR?</h2>
                         <p>Unete a nuestra red de distribución y lleva calidad a mas hogares</p>
-                        <Link id="boton-mas-info-dist" to={"/huevo/contacto"}><section>MAS INFORMACIÓN</section></Link>
+                        <a id="boton-mas-info-dist" href={"/huevo/contacto"}><section>MAS INFORMACIÓN</section></a>
                     </div>
                 </div>
                 <div className="inline-flex" id="notipromos-container">
@@ -274,4 +253,4 @@ const Contenido = () => {
     )
 }
 
-export { Inicio }
+export default { Page: Inicio }
